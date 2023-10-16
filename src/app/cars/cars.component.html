@@ -1,0 +1,11 @@
+<app-add-car (onAddCar)="updateCarList($event)"></app-add-car>
+
+<hr>
+
+<div class="list-group">
+    <app-car class="list-group-item" *ngFor="let car of cars" [carItem]="car">
+        <h4 #headerEL class="list-group-item-heading">{{ car.name }}</h4>
+        <p class="list-group-item-text">{{ car.year }}</p>
+    </app-car>
+</div>
+
